@@ -29,7 +29,53 @@
             </div>
         </div>
          <!-- end navbar section -->
+         
+         <!-- start header content section -->
+        <div class="header-content">
+            <div class="header-content-item">
+                <h1 id="home-heading"><span class="capital">p</span>ersonal <span class="capital">i</span>nformation
+                </h1>
+                <div class="row">
+                    <table class="table-info">
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">f</span>ull <span
+                                    class="capital">n</span>ame:</td>
+                            <td class="table-cell-2"><span class="capital">a</span>ya <span class="capital">m</span>azen
+                                <span class="capital">a</span>larayshi</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">g</span>ender:</td>
+                            <td class="table-cell-2"><span class="capital">f</span>emale</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">b</span>irth <span
+                                    class="capital">d</span>ate: </td>
+                            <td class="table-cell-2">7<sup>th</sup>, <span class="capital">a</span>pr. 2002</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">n</span>ationality:</td>
+                            <td class="table-cell-2"><span class="capital">p</span>alestinian</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">p</span>lace of <span
+                                    class="capital">b</span>irth:</td>
+                            <td class="table-cell-2"><span class="capital">g</span>aza</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">j</span>ob tittle:</td>
+                            <td class="table-cell-2"><span class="capital">s</span>oftware <span
+                                    class="capital">e</span>ngineering</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-cell-1"><span class="capital">y</span>ear of experience:</td>
+                            <td class="table-cell-2">3 years</td>
+                        </tr>
+                    </table>
+                    <img src="../Images/personal.png" alt="Personal Image" id="personal-img" />
+                </div>
+            </div>
+        </div>
     </div>
-    
+    <!-- end header section -->    
 </body>
 </html>

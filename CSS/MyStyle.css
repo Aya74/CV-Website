@@ -99,3 +99,48 @@ body{
 }
 
 /* end navbar style */
+
+/* header style */
+.header-content {
+    height: 100vh;
+}
+
+.header-content-item {
+    text-align: left;
+    padding-top: 85px;
+}
+
+#home-heading {
+    margin-left: 45px;
+    margin-bottom: 20px;
+    font-family: Unispace;
+    font-size: 34px;
+}
+
+/* table style */
+
+.table-info {
+    margin-left: 32px;
+    margin-right: 30%;
+}
+
+td {
+    padding: 14px 13px 14px 13px;
+    font-size: 15px;
+}
+
+.table-cell-2 {
+    font-weight: bold;
+}
+
+/* end table style */
+
+/* personal img style */
+#personal-img {
+    width: 350px;
+    height: 350px;
+    margin-top: 15px;
+    border: 1px solid grey;
+}
+
+/* end home page style */
