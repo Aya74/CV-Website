@@ -30,10 +30,76 @@
         </div>
         <!-- start header content section -->
         <div class="header-content">
-      <div class="header-content-item">
-      </div>
-      </div>
+    <div class="header-content-item">
+        <div class="row">
+            <form action="#" method="post" id="addExperienceForm" class="form">
+                <table id="addExperienceTable">
+                    <tr class="addExperienceTableRow">
+                        <td>
+                            <label for="experiencesCategory">Experiences Category</label>
+                        </td>
+                        <td><select name="experiencesCategory" id="customSelect">
+                                <option disabled selected value></option>
+                                <option value="jop" >Jop</option>
+                                <option value="freelancer">Freelancer</option>
+                                <option value="volunteer">Volunteer</option>
+                                <option value="selfLearning">Self-Learning</option>
+                                <option value="training">Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                        <td>
+                            <label for="experiences"> Experiences Title</label>
+                        </td>
+                        <td><input type="text" name=" experiences" id=" experiences"></td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                        <td>
+                            <label for="startMonth">Start month:</label>
+                        </td>
+                        <td><input type="date" name="startMonth" id="startMonth"> </td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                        <td>
+                            <label for="endMonth">End month:</label>
+                        </td>
+                        <td><input type="date" name="endMonth" id="endMonth"> </td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                        <td>
+                            <label for="institution">Institution:</label>
+                        </td>
+                        <td> <input type="text" name=" institution" id=" institution"></td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                        <td class="textAreaLabel">
+                            <label for="description">Description</label>
+                        </td>
+                        <td><textarea name="description" id="description" cols="45" rows="8"></textarea></td>
+                    </tr>
+
+                    <tr class="addExperienceTableRow">
+                            <td> 
+                               <input type="submit" value="Save">
+                            </td>
+                            <td> 
+                               <input type="reset" value="Reset">
+                            </td> 
+                    </tr>
+                </table>
+            </form>
+            <img src="../Images/experience.jpg" alt="Experience image" class="headerImg" />
+        </div>
     </div>
-    <!-- end header section -->
+</div>
+</div>
+<!-- end header section -->
 </body>
 </html>
