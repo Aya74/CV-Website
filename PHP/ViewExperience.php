@@ -31,6 +31,29 @@
         <!-- start header content section -->
         <div class="header-content">
       <div class="header-content-item">
+            <h1 id="home-heading">
+              <span class="capital">a</span>ll 
+              <span class="capital">e</span>xpperiences 
+              <span class="capital">i</span>nformation
+             </h1>
+            <div class="experiencesInformationDiv">
+                <h3 class="experiencesTitleHeading">Web Development 
+                  <sub class="institutionName">Al-Azhar university /
+                      <span class="experiencesCategory">job</span> 
+                  </sub>
+                </h3>
+                <h4 class="startEndDate">from 
+                  <span class="startDateSpan">5/2020</span>
+                  to
+                  <span class="endDateSpan">6/2026</span>
+                </h4>
+                <p class="experienceDescriptionPara">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo corrupti optio tenetur quaerat similique ipsam mollitia quibusdam error. Voluptatem, 
+                    nihil expedita deleniti libero dolore vero accusantium nam assumenda voluptates natus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores quis ullam quas ab reiciendis libero nemo,
+                    cumque sunt soluta expedita velit accusamus nobis minus neque? Odit ipsum ullam nesciunt!
+                </p>
+            </div>
       </div>
       </div>
     </div>

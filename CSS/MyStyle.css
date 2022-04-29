@@ -174,7 +174,9 @@ input[type=text],
 input[type=date],
 input[type=number],
 input[type=url],
-#customSelect /* This id from Add Experience page but has sharing style with those inputs */
+#customSelect
+
+/* This id from Add Experience page but has sharing style with those inputs */
     {
     border-radius: 5px;
     border: solid 1px grey;
@@ -224,3 +226,23 @@ input[type=reset] {
 }
 
 /* End Add Experience page style */
+
+
+/* Start view experience page header style */
+.experiencesInformationDiv {
+    margin-left: 45px;
+    margin-bottom: 50px;
+}
+
+.experiencesTitleHeading,
+.startEndDate {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Arial Rounded MT";
+}
+
+.institutionName {
+    font-size: 12px;
+}
+
+/* End view experience page header style */
