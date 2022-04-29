@@ -44,6 +44,10 @@ body {
     font-family: Tahoma;
 }
 
+.textAreaLabel {
+    vertical-align: top;
+}
+
 /* end public style */
 
 
@@ -148,32 +152,34 @@ body {
 
 
 /* Start Add Course page style */
-.addCourse-header-content-item {
+.header-content-item {
     padding-top: 100px;
 }
 
-#addCourseImg {
+.headerImg {
     height: 480px;
     padding-left: 140px;
 }
 
-#addCourseForm {
+.form {
     margin-left: 120px;
 }
 
-.addCourseTableRow td {
-    padding: 10px 15px 10px 13px;
+td {
+    padding: 9px 15px 9px 13px;
     font-size: 15px;
 }
 
 input[type=text],
 input[type=date],
 input[type=number],
-input[type=url] {
+input[type=url],
+#customSelect /* This id from Add Experience page but has sharing style with those inputs */
+    {
     border-radius: 5px;
     border: solid 1px grey;
-    height: 20px;
-    width: 200px;
+    height: 25px;
+    width: 150px;
 }
 
 input[type=radio] {
@@ -205,3 +211,16 @@ input[type=reset] {
 }
 
 /* End Add Course page style */
+
+/* Start Add Experience page style */
+.addExperienceTableRow input[type=reset] {
+    margin-left: 70px;
+    margin-right: 140px;
+}
+
+.addExperienceTableRow td {
+    padding: 10px 15px 17px 5px;
+    font-size: 15px;
+}
+
+/* End Add Experience page style */
