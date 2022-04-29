@@ -33,10 +33,10 @@
         <!-- end navbar section -->
 
         <!-- start header content section -->
-        <div class="addCourse-header-content">
-            <div class="addCourse-header-content-item">
+        <div class="header-content">
+            <div class="header-content-item">
                 <div class="row">
-                    <form action="#" method="post" id="addCourseForm">
+                    <form action="#" method="post" id="addCourseForm" class="form">
                         <table id="addCourseTable">
                             <tr class="addCourseTableRow">
                                 <td><label for="courseName">Course Name:</label></td>
@@ -76,7 +76,7 @@
                                 <td><input type="file" name="fileInput" id="fileInput"></td>
                             </tr>
                             <tr class="addCourseTableRow">
-                                <td><label for="notes">Notes:</label></td>
+                                <td class="textAreaLabel"><label for="notes">Notes:</label></td>
                                 <td><textarea name="notes" id="notes" cols="25" rows="5"></textarea></td>
                             </tr>
                             <tr class="addCourseTableRow">
@@ -85,7 +85,7 @@
                             </tr>
                         </table>
                     </form>
-                    <img src="../Images/course.jpg" alt="Course Image" id="addCourseImg" />
+                    <img src="../Images/course.jpg" alt="Course Image" class="headerImg" />
                 </div>
             </div>
         </div>
