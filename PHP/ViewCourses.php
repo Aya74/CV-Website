@@ -31,6 +31,11 @@
         <!-- start header content section -->
         <div class="header-content">
       <div class="header-content-item">
+            <h1 id="home-heading">
+              <span class="capital">a</span>ll 
+              <span class="capital">C</span>ourses
+              <span class="capital">i</span>nformation
+             </h1>
       </div>
       </div>
     </div>
