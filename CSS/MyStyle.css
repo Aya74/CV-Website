@@ -193,8 +193,8 @@ textarea {
 }
 
 input[type=submit] {
-    background-color: rgb(31, 132, 83);
-    border: solid 1px rgb(31, 132, 83);
+    background-color: #198754;
+    border: solid 1px #198754;
     color: white;
     width: 140px;
     height: 20px;
@@ -203,8 +203,8 @@ input[type=submit] {
 }
 
 input[type=reset] {
-    background-color: rgb(220, 53, 72);
-    border: solid 1px rgb(220, 53, 72);
+    background-color: #dc3545;
+    border: solid 1px #dc3545;
     color: white;
     width: 140px;
     height: 20px;
@@ -246,3 +246,59 @@ input[type=reset] {
 }
 
 /* End view experience page header style */
+
+/* Start view courses page header style */
+.viewCoursesTable {
+    margin-left: 45px;
+    width: 90%;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.viewCoursesTable th {
+    height: 30px;
+    background-color: #606060;
+}
+
+.viewCoursesTable td {
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.viewCoursesTable .cell1 {
+    width: 50px;
+}
+
+.viewCoursesTable .cell2,
+.cell4,
+.cell5,
+.cell7 {
+    width: 200px;
+}
+
+.viewCoursesTable .cell3,
+.cell6 {
+    width: 150px;
+}
+
+.viewCoursesTableRow {
+    font-size: 13px;
+}
+
+.viewCoursesTable .courseNameTD,
+.noteTD {
+    text-align: left;
+}
+
+.viewCoursesTableRow:nth-child(odd) {
+    background-color: #E5E5E5;
+}
+
+.numTD {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* End view courses page header style */
