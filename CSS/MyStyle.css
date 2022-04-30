@@ -302,3 +302,28 @@ input[type=reset] {
 }
 
 /* End view courses page header style */
+
+
+/* Start course view  page header style */
+.header-content-item p {
+    padding: 5px 0px 5px 45px;
+    font-size: 14px;
+}
+
+figure {
+    padding-left: 80px;
+    padding-top: 20px;
+}
+
+.certificationImg {
+    width: 90%;
+    height: 70%;
+    box-shadow: 8px 8px 5px #9c9b9b;
+    margin-bottom: 15px;
+}
+
+.figureCaption {
+    font-size: 14px;
+}
+
+/* Start course view page header style */
