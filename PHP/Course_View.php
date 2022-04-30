@@ -31,6 +31,24 @@
             </div>
         </div>
         <!-- end navbar section -->
+        <div class="header-content">
+            <div class="header-content-item">
+                <h1 id="home-heading">
+                    <span class="capital">c</span>ourse "<span class="courseNameView">Java1</span>"
+                </h1>
+                <p class="courseDalyDetalies">
+                    from<span class="startDateView"> 25/11/2019</span> to <span class="endDateView"> 2/1/2020</span>,
+                    totally <span class="totalHoursView">50</span> training hours
+                </p>
+                <p class="institutionInformation">
+                    Institution was "<span class="institutionNameView">Top Tech</span>"
+                </p>
+                <figure>
+                    <img src="../Images/certification.png" alt="Certification image" class="certificationImg" />
+                    <figcaption class="figureCaption">Certification File</figcaption>
+                </figure>
+            </div>
+        </div>
     </div>
     <!-- end header section -->
 </body>
