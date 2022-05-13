@@ -22,5 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $endMonth = mysqli_real_escape_string($conn, $_POST['endMonth']);
         $institution = mysqli_real_escape_string($conn, $_POST['institution']);
         $descriptionCourse = mysqli_real_escape_string($conn, $_POST['description']);
+        //insert information in database columns (استعلام قاعدة البيانات)
+        $sql = "INSERT INTO experiences(experiencesCategory,experiences,startMonth,endMonth,institution,description)
+        VALUES ('$experiencesCategory','$experiencesTitle','$startMonth','$endMonth','$institution','$descriptionCourse')";
     }
 ?>
