@@ -1,3 +1,14 @@
+<?php
+include '../inc/experiencesDB.php';
+//get data from database
+$sqlSelect = 'SELECT * FROM experiences';
+//save data from database in result var
+$result = mysqli_query($conn,$sqlSelect);
+//get data from result and save it in an associative array
+$experiences = mysqli_fetch_all($result,MYSQLI_ASSOC);
+mysqli_free_result($result);
+mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,24 +50,22 @@
                     <span class="capital">i</span>nformation
                 </h1>
                 <div class="experiencesInformationDiv">
-                    <h3 class="experiencesTitleHeading">Web Development
-                        <sub class="institutionName">Al-Azhar university /
-                            <span class="experiencesCategory">job</span>
+                    <?php foreach($experiences as $experience): ?>
+                    <h3 class="experiencesTitleHeading"><?php echo htmlspecialchars($experience['experiences']); ?>
+                        <sub class="institutionName"><?php echo htmlspecialchars($experience['institution']); ?> /
+                            <span
+                                class="experiencesCategory"><?php echo htmlspecialchars($experience['experiencesCategory']); ?></span>
                         </sub>
                     </h3>
                     <h4 class="startEndDate">from
-                        <span class="startDateSpan">5/2020</span>
+                        <span class="startDateSpan"><?php echo htmlspecialchars($experience['startMonth']); ?></span>
                         to
-                        <span class="endDateSpan">6/2026</span>
+                        <span class="endDateSpan"><?php echo htmlspecialchars($experience['endMonth']); ?></span>
                     </h4>
                     <p class="experienceDescriptionPara">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo corrupti optio tenetur quaerat
-                        similique ipsam mollitia quibusdam error. Voluptatem,
-                        nihil expedita deleniti libero dolore vero accusantium nam assumenda voluptates natus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores quis ullam quas ab
-                        reiciendis libero nemo,
-                        cumque sunt soluta expedita velit accusamus nobis minus neque? Odit ipsum ullam nesciunt!
+                        <?php echo htmlspecialchars($experience['description']); ?>
                     </p>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
