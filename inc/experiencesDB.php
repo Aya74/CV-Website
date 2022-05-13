@@ -14,5 +14,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $institution = $_POST['institution'];
     $descriptionCourse = $_POST['description'];
     }
-
+    if(isset($_POST['submit'])){
+        // convert var input to string
+        $experiencesCategory = mysqli_real_escape_string($conn, $_POST['experiencesCategory']);
+        $experiencesTitle = mysqli_real_escape_string($conn, $_POST['experiences']);
+        $startMonth = mysqli_real_escape_string($conn, $_POST['startMonth']);
+        $endMonth = mysqli_real_escape_string($conn, $_POST['endMonth']);
+        $institution = mysqli_real_escape_string($conn, $_POST['institution']);
+        $descriptionCourse = mysqli_real_escape_string($conn, $_POST['description']);
+    }
 ?>
