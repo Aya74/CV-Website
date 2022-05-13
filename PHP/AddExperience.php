@@ -88,10 +88,10 @@
 
                             <tr class="addExperienceTableRow">
                                 <td>
-                                    <input type="submit" value="Save">
+                                    <input type="submit" value="Save" name="submit">
                                 </td>
                                 <td>
-                                    <input type="reset" value="Reset">
+                                    <input type="reset" value="Reset" name="reset">
                                 </td>
                             </tr>
                         </table>

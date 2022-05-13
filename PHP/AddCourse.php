@@ -80,8 +80,8 @@
                                 <td><textarea name="notes" id="notes" cols="25" rows="5"></textarea></td>
                             </tr>
                             <tr class="addCourseTableRow">
-                                <td><input type="submit" value="Save"></td>
-                                <td><input type="reset" value="Reset"></td>
+                                <td><input type="submit" value="Save" name="submit"></td>
+                                <td><input type="reset" value="Reset" name="reset"></td>
                             </tr>
                         </table>
                     </form>
