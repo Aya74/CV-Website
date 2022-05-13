@@ -39,7 +39,7 @@
                                 <td>
                                     <label for="experiencesCategory">Experiences Category</label>
                                 </td>
-                                <td><select name="experiencesCategory" id="customSelect">
+                                <td><select name="experiencesCategory" id="customSelect" required>
                                         <option disabled selected value></option>
                                         <option value="jop">Jop</option>
                                         <option value="freelancer">Freelancer</option>
@@ -55,35 +55,35 @@
                                 <td>
                                     <label for="experiences"> Experiences Title</label>
                                 </td>
-                                <td><input type="text" name=" experiences" id=" experiences"></td>
+                                <td><input type="text" name=" experiences" id=" experiences" required></td>
                             </tr>
 
                             <tr class="addExperienceTableRow">
                                 <td>
                                     <label for="startMonth">Start month:</label>
                                 </td>
-                                <td><input type="date" name="startMonth" id="startMonth"> </td>
+                                <td><input type="date" name="startMonth" id="startMonth" required> </td>
                             </tr>
 
                             <tr class="addExperienceTableRow">
                                 <td>
                                     <label for="endMonth">End month:</label>
                                 </td>
-                                <td><input type="date" name="endMonth" id="endMonth"> </td>
+                                <td><input type="date" name="endMonth" id="endMonth" required> </td>
                             </tr>
 
                             <tr class="addExperienceTableRow">
                                 <td>
                                     <label for="institution">Institution:</label>
                                 </td>
-                                <td> <input type="text" name=" institution" id=" institution"></td>
+                                <td> <input type="text" name=" institution" id=" institution" required></td>
                             </tr>
 
                             <tr class="addExperienceTableRow">
                                 <td class="textAreaLabel">
                                     <label for="description">Description</label>
                                 </td>
-                                <td><textarea name="description" id="description" cols="45" rows="8"></textarea></td>
+                                <td><textarea name="description" id="description" cols="45" rows="8" required></textarea></td>
                             </tr>
 
                             <tr class="addExperienceTableRow">
