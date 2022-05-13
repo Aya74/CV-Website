@@ -25,5 +25,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //insert information in database columns (استعلام قاعدة البيانات)
         $sql = "INSERT INTO experiences(experiencesCategory,experiences,startMonth,endMonth,institution,description)
         VALUES ('$experiencesCategory','$experiencesTitle','$startMonth','$endMonth','$institution','$descriptionCourse')";
+        //refresh the page when submit
+        if(mysqli_query($conn, $sql))
+        header("location:../PHP/AddExperience.php");
+        else
+        echo 'Error: '.mysqli_error($conn);
     }
 ?>
