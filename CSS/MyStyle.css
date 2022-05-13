@@ -48,6 +48,10 @@ body {
     vertical-align: top;
 }
 
+abbr{
+    text-decoration: none;
+}
+
 /* end public style */
 
 

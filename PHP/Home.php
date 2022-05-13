@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <!-- custome css style -->
     <link rel="stylesheet" href="../CSS/MyStyle.css">
 </head>
+
 <body>
     <!-- start header section -->
     <div class="header">
@@ -28,9 +30,9 @@
                 <img src="../Images/azharLogo.png" alt="Al Azhar logo" id="alazharLogo" />
             </div>
         </div>
-         <!-- end navbar section -->
-         
-         <!-- start header content section -->
+        <!-- end navbar section -->
+
+        <!-- start header content section -->
         <div class="header-content">
             <div class="header-content-item">
                 <h1 id="home-heading"><span class="capital">p</span>ersonal <span class="capital">i</span>nformation
@@ -41,7 +43,8 @@
                             <td class="table-cell-1"><span class="capital">f</span>ull <span
                                     class="capital">n</span>ame:</td>
                             <td class="table-cell-2"><span class="capital">a</span>ya <span class="capital">m</span>azen
-                                <span class="capital">a</span>larayshi</td>
+                                <span class="capital">a</span>larayshi
+                            </td>
                         </tr>
                         <tr class="table-row">
                             <td class="table-cell-1"><span class="capital">g</span>ender:</td>
@@ -50,7 +53,8 @@
                         <tr class="table-row">
                             <td class="table-cell-1"><span class="capital">b</span>irth <span
                                     class="capital">d</span>ate: </td>
-                            <td class="table-cell-2">7<sup>th</sup>, <span class="capital">a</span>pr. 2002</td>
+                            <td class="table-cell-2">7<sup>th</sup>, <abbr title="monthName"><span
+                                        class="capital">a</span>pr.</abbr> 2002</td>
                         </tr>
                         <tr class="table-row">
                             <td class="table-cell-1"><span class="capital">n</span>ationality:</td>
@@ -76,6 +80,7 @@
             </div>
         </div>
     </div>
-    <!-- end header section -->    
+    <!-- end header section -->
 </body>
+
 </html>
