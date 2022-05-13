@@ -1,5 +1,9 @@
 <?php
 include '../inc/experiencesDB.php';
+//get data from database
+$sqlSelect = 'SELECT * FROM experiences';
+//save data from database in result var
+$result = mysqli_query($conn,$sqlSelect);
 ?>
 <!DOCTYPE html>
 <html lang="en">
