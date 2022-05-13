@@ -1,3 +1,6 @@
+<?php
+include '../inc/experiencesDB.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
