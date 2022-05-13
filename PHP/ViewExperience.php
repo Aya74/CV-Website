@@ -4,6 +4,8 @@ include '../inc/experiencesDB.php';
 $sqlSelect = 'SELECT * FROM experiences';
 //save data from database in result var
 $result = mysqli_query($conn,$sqlSelect);
+//get data from result and save it in an associative array
+$experiences = mysqli_fetch_all($result,MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
