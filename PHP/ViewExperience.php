@@ -50,6 +50,7 @@ mysqli_close($conn);
                     <span class="capital">i</span>nformation
                 </h1>
                 <div class="experiencesInformationDiv">
+                    <?php foreach($experiences as $experience): ?>
                     <h3 class="experiencesTitleHeading">Web Development
                         <sub class="institutionName">Al-Azhar university /
                             <span class="experiencesCategory">job</span>
@@ -68,6 +69,7 @@ mysqli_close($conn);
                         reiciendis libero nemo,
                         cumque sunt soluta expedita velit accusamus nobis minus neque? Odit ipsum ullam nesciunt!
                     </p>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
