@@ -6,6 +6,8 @@ $sqlSelect = 'SELECT * FROM experiences';
 $result = mysqli_query($conn,$sqlSelect);
 //get data from result and save it in an associative array
 $experiences = mysqli_fetch_all($result,MYSQLI_ASSOC);
+mysqli_free_result($result);
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
