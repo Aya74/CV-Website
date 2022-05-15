@@ -1,3 +1,18 @@
+<?php
+//var to connect database
+$connDH = mysqli_connect('localhost','root','root','cvwebsite');
+//if the connection fail display error msg
+if(!$connDH)
+echo 'Error: '.mysqli_connect_error();
+//get data from database
+$sqlSelect = 'SELECT * FROM personalinformation';
+//save data from database in result var
+$resultH = mysqli_query($connDH,$sqlSelect);
+//get data from result and save it in an associative array
+$personalinformation = mysqli_fetch_all($resultH,MYSQLI_ASSOC);
+mysqli_free_result($resultH);
+mysqli_close($connDH);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,43 +53,44 @@
                 <h1 id="home-heading"><span class="capital">p</span>ersonal <span class="capital">i</span>nformation
                 </h1>
                 <div class="row">
+                    <?php foreach($personalinformation as $info): ?>
                     <table class="table-info">
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">f</span>ull <span
-                                    class="capital">n</span>ame:</td>
-                            <td class="table-cell-2"><span class="capital">a</span>ya <span class="capital">m</span>azen
-                                <span class="capital">a</span>larayshi
+                            <td class="table-cell-1">Full Name:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['fullName']); ?>
                             </td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">g</span>ender:</td>
-                            <td class="table-cell-2"><span class="capital">f</span>emale</td>
+                            <td class="table-cell-1">Gender:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['gender']); ?></td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">b</span>irth <span
-                                    class="capital">d</span>ate: </td>
-                            <td class="table-cell-2">7<sup>th</sup>, <abbr title="monthName"><span
-                                        class="capital">a</span>pr.</abbr> 2002</td>
+                            <td class="table-cell-1">Birth Date:</td>
+                            <td class="table-cell-2">
+                                <?php echo htmlspecialchars($info['dayNum']);?><sup><?php echo htmlspecialchars($info['seriesAbbreviation']); ?></sup>,
+                                <abbr title="monthName"><?php echo htmlspecialchars($info['monthName']); ?></abbr>
+                                <?php echo htmlspecialchars($info['yearNum']); ?>
+                            </td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">n</span>ationality:</td>
-                            <td class="table-cell-2"><span class="capital">p</span>alestinian</td>
+                            <td class="table-cell-1">Nationality:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['nationality']);?></td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">p</span>lace of <span
-                                    class="capital">b</span>irth:</td>
-                            <td class="table-cell-2"><span class="capital">g</span>aza</td>
+                            <td class="table-cell-1">Place of Birth:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['placeOfBirth']);?></td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">j</span>ob tittle:</td>
-                            <td class="table-cell-2"><span class="capital">s</span>oftware <span
-                                    class="capital">e</span>ngineering</td>
+                            <td class="table-cell-1">Job tittle:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['jobTittle']);?></td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">y</span>ear of experience:</td>
-                            <td class="table-cell-2">3 years</td>
+                            <td class="table-cell-1">Year of experience:</td>
+                            <td class="table-cell-2"><?php echo htmlspecialchars($info['yearOf Experience']);?> years
+                            </td>
                         </tr>
                     </table>
+                    <?php endforeach; ?>
                     <img src="../Images/personal.png" alt="Personal Image" id="personal-img" />
                 </div>
             </div>
