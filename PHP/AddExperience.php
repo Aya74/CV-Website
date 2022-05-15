@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <div class="header-content">
             <div class="header-content-item">
                 <div class="row">
-                    <form action="ViewExperience.php" method="post" id="addExperienceForm" class="form">
+                    <form action="AddExperience.php" method="post" id="addExperienceForm" class="form">
                         <table id="addExperienceTable">
                             <tr class="addExperienceTableRow">
                                 <td>
