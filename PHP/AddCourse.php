@@ -7,22 +7,29 @@ echo 'Error: '.mysqli_connect_error();
 // variables declarpation
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $courseName = $_POST['courseName'];
-    $numberOfHours = $_POST['numberOfHours'];
+    $numberOfHours = $_POST['hoursNum'];
     $startDate = $_POST['startDate'];
-    $endDate = $_POST['endDate'];
+    $endDate = $_POST['endtDate'];
     $institution = $_POST['institution'];
     $attachment = $_POST['attachment'];
-    $url = $_POST['url'];
+    $url = $_POST['urlInput'];
     $notes = $_POST['notes'];
     //we have to declare var for the image
-    $notes = $_POST['notes'];
 }
 if(isset($_POST['submit'])){
     // convert var input to string
     $courseName = mysqli_real_escape_string($conn, $_POST['courseName']);
     $institution = mysqli_real_escape_string($conn, $_POST['institution']);
-    $url = mysqli_real_escape_string($conn, $_POST['url']);
+    $url = mysqli_real_escape_string($conn, $_POST['urlInput']);
     $notes = mysqli_real_escape_string($conn, $_POST['notes']);
+    //insert information in database columns (استعلام قاعدة البيانات)
+    $sqlC = "INSERT INTO courses(courseName,numberOfHours,startDate,endDate,institution,attachment,url,notes)
+    VALUES ('$courseName','$numberOfHours','$startDate','$endDate','$institution','$attachment','$url','$notes')";
+    //refresh the page when submit
+    if(mysqli_query($conn, $sqlC))
+    header("location:../PHP/AddCourse.php");
+    else
+    echo 'Error: '.mysqli_error($conn);
 }
 ?>
 <!DOCTYPE html>
@@ -63,7 +70,7 @@ if(isset($_POST['submit'])){
         <div class="header-content">
             <div class="header-content-item">
                 <div class="row">
-                    <form action="#" method="post" id="addCourseForm" class="form">
+                    <form action="AddCourse.php" method="post" id="addCourseForm" class="form">
                         <table id="addCourseTable">
                             <tr class="addCourseTableRow">
                                 <td><label for="courseName">Course Name:</label></td>
