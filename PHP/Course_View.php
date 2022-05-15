@@ -1,3 +1,18 @@
+<?php
+//var to connect database
+$connCV = mysqli_connect('localhost','root','root','cvwebsite');
+//if the connection fail display error msg
+if(!$connCV)
+echo 'Error: '.mysqli_connect_error();
+//get data from database
+$sqlSelectCV = 'SELECT * FROM courses';
+//save data from database in result var
+$resultCV = mysqli_query($connCV,$sqlSelectCV);
+//get data from result and save it in an associative array
+$coursesV = mysqli_fetch_all($resultCV,MYSQLI_ASSOC);
+mysqli_free_result($resultCV);
+mysqli_close($connCV);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
