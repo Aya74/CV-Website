@@ -1,5 +1,9 @@
 <?php
-include '../inc/experiencesDB.php';
+//var to connect database
+$connD = mysqli_connect('localhost','root','root','cvwebsite');
+//if the connection fail display error msg
+if(!$connD)
+echo 'Error: '.mysqli_connect_error();
 //get data from database
 $sqlSelect = 'SELECT * FROM experiences';
 //save data from database in result var
