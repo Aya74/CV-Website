@@ -4,6 +4,18 @@ $conn = mysqli_connect('localhost','root','root','cvwebsite');
 //if the connection fail display error msg
 if(!$conn)
 echo 'Error: '.mysqli_connect_error();
+// variables declarpation
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $courseName = $_POST['courseName'];
+    $numberOfHours = $_POST['numberOfHours'];
+    $startDate = $_POST['startDate'];
+    $endDate = $_POST['endDate'];
+    $institution = $_POST['institution'];
+    $attachment = $_POST['attachment'];
+    $url = $_POST['url'];
+    //we have to declare var for the image
+    $notes = $_POST['notes'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
