@@ -13,8 +13,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $institution = $_POST['institution'];
     $attachment = $_POST['attachment'];
     $url = $_POST['url'];
+    $notes = $_POST['notes'];
     //we have to declare var for the image
     $notes = $_POST['notes'];
+}
+if(isset($_POST['submit'])){
+    // convert var input to string
+    $courseName = mysqli_real_escape_string($conn, $_POST['courseName']);
+    $institution = mysqli_real_escape_string($conn, $_POST['institution']);
+    $url = mysqli_real_escape_string($conn, $_POST['url']);
+    $notes = mysqli_real_escape_string($conn, $_POST['notes']);
 }
 ?>
 <!DOCTYPE html>
