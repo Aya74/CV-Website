@@ -2,14 +2,14 @@
 //var to connect database
 $connC = mysqli_connect('localhost','root','root','cvwebsite');
 //if the connection fail display error msg
-if(!$connD)
+if(!$connC)
 echo 'Error: '.mysqli_connect_error();
 //get data from database
 $sqlSelectC = 'SELECT * FROM courses';
 //save data from database in result var
-$resultC = mysqli_query($connD,$sqlSelectC);
+$resultC = mysqli_query($connC,$sqlSelectC);
 //get data from result and save it in an associative array
-$experiences = mysqli_fetch_all($resultC,MYSQLI_ASSOC);
+$courses = mysqli_fetch_all($resultC,MYSQLI_ASSOC);
 mysqli_free_result($resultC);
 mysqli_close($connC);
 ?>
@@ -70,28 +70,18 @@ mysqli_close($connC);
                         </tr>
                     </thead>
                     <tbody>
+                    <?php foreach($courses as $course): ?>
                         <tr class="viewCoursesTableRow">
-                            <td class="numTD">1</td>
-                            <td class="courseNameTD">Java1</td>
-                            <td class="totalHoursTD">50</td>
-                            <td class="startdateTD">25/11/2019</td>
-                            <td class="enddateTD">2/1/2020</td>
-                            <td class="institutionTD">TopTech</td>
+                            <td class="numTD"><?php echo htmlspecialchars($course['id']); ?></td>
+                            <td class="courseNameTD"><?php echo htmlspecialchars($course['courseName']); ?></td>
+                            <td class="totalHoursTD"><?php echo htmlspecialchars($course['numberOfHours']); ?></td>
+                            <td class="startdateTD"><?php echo htmlspecialchars($course['startDate']); ?></td>
+                            <td class="enddateTD"><?php echo htmlspecialchars($course['endDate']); ?></td>
+                            <td class="institutionTD"><?php echo htmlspecialchars($course['institution']); ?></td>
                             <td class="attachmentTD"><a href="Course_View.php">View</a></td>
-                            <td class="noteTD">The readable content of a page when looking at its layout. The point of
-                                using Lorem Ipsum</td>
+                            <td class="noteTD"><?php echo htmlspecialchars($course['notes']); ?></td>
                         </tr>
-                        <tr class="viewCoursesTableRow">
-                            <td class="numTD">2</td>
-                            <td class="courseNameTD">Java2</td>
-                            <td class="totalHoursTD">50</td>
-                            <td class="startdateTD">4/7/2020</td>
-                            <td class="enddateTD">2/11/2020</td>
-                            <td class="institutionTD">TopTech</td>
-                            <td class="attachmentTD"><a href="Course_View.php">View</a></td>
-                            <td class="noteTD">The readable content of a page when looking at its layout. The point of
-                                using Lorem Ipsum</td>
-                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
