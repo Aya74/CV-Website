@@ -1,9 +1,17 @@
 <?php
 //var to connect database
-$connD = mysqli_connect('localhost','root','root','cvwebsite');
+$connC = mysqli_connect('localhost','root','root','cvwebsite');
 //if the connection fail display error msg
 if(!$connD)
 echo 'Error: '.mysqli_connect_error();
+//get data from database
+$sqlSelectC = 'SELECT * FROM courses';
+//save data from database in result var
+$resultC = mysqli_query($connD,$sqlSelectC);
+//get data from result and save it in an associative array
+$experiences = mysqli_fetch_all($resultC,MYSQLI_ASSOC);
+mysqli_free_result($resultC);
+mysqli_close($connC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
