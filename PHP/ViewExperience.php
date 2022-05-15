@@ -7,11 +7,11 @@ echo 'Error: '.mysqli_connect_error();
 //get data from database
 $sqlSelect = 'SELECT * FROM experiences';
 //save data from database in result var
-$result = mysqli_query($conn,$sqlSelect);
+$result = mysqli_query($connD,$sqlSelect);
 //get data from result and save it in an associative array
 $experiences = mysqli_fetch_all($result,MYSQLI_ASSOC);
 mysqli_free_result($result);
-mysqli_close($conn);
+mysqli_close($connD);
 ?>
 <!DOCTYPE html>
 <html lang="en">
