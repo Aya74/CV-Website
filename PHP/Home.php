@@ -40,38 +40,32 @@
                 <div class="row">
                     <table class="table-info">
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">f</span>ull <span
-                                    class="capital">n</span>ame:</td>
-                            <td class="table-cell-2"><span class="capital">a</span>ya <span class="capital">m</span>azen
-                                <span class="capital">a</span>larayshi
+                            <td class="table-cell-1">Full Name:</td>
+                            <td class="table-cell-2">Aya Mazen Alarayshi
                             </td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">g</span>ender:</td>
-                            <td class="table-cell-2"><span class="capital">f</span>emale</td>
+                            <td class="table-cell-1">Gender:</td>
+                            <td class="table-cell-2">Female</td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">b</span>irth <span
-                                    class="capital">d</span>ate: </td>
-                            <td class="table-cell-2">7<sup>th</sup>, <abbr title="monthName"><span
-                                        class="capital">a</span>pr.</abbr> 2002</td>
+                            <td class="table-cell-1">Birth Date:</td>
+                            <td class="table-cell-2">7<sup>th</sup>, <abbr title="monthName">Apr.</abbr> 2002</td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">n</span>ationality:</td>
-                            <td class="table-cell-2"><span class="capital">p</span>alestinian</td>
+                            <td class="table-cell-1">Nationality:</td>
+                            <td class="table-cell-2">Palestinian</td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">p</span>lace of <span
-                                    class="capital">b</span>irth:</td>
-                            <td class="table-cell-2"><span class="capital">g</span>aza</td>
+                            <td class="table-cell-1">Place of Birth:</td>
+                            <td class="table-cell-2">Gaza</td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">j</span>ob tittle:</td>
-                            <td class="table-cell-2"><span class="capital">s</span>oftware <span
-                                    class="capital">e</span>ngineering</td>
+                            <td class="table-cell-1">Job tittle:</td>
+                            <td class="table-cell-2">Software Engineering</td>
                         </tr>
                         <tr class="table-row">
-                            <td class="table-cell-1"><span class="capital">y</span>ear of experience:</td>
+                            <td class="table-cell-1">Year of experience:</td>
                             <td class="table-cell-2">3 years</td>
                         </tr>
                     </table>
