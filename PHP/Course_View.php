@@ -5,11 +5,14 @@ $connCV = mysqli_connect('localhost','root','root','cvwebsite');
 if(!$connCV)
 echo 'Error: '.mysqli_connect_error();
 //get data from database
-$sqlSelectCV = 'SELECT * FROM courses';
+if(isset($_REQUEST["id"])){
+$id = $_REQUEST["id"];
+$sqlSelectCV = 'SELECT * FROM courses WHERE id ='.$id;
 //save data from database in result var
 $resultCV = mysqli_query($connCV,$sqlSelectCV);
 //get data from result and save it in an associative array
 $coursesV = mysqli_fetch_all($resultCV,MYSQLI_ASSOC);
+}
 mysqli_free_result($resultCV);
 mysqli_close($connCV);
 ?>
@@ -48,21 +51,28 @@ mysqli_close($connCV);
         <!-- end navbar section -->
         <div class="header-content">
             <div class="header-content-item">
+                <?php foreach($coursesV as $courseV): ?>
                 <h1 id="home-heading">
-                    <span class="capital">c</span>ourse "<span class="courseNameView">Java1</span>"
+                    Course "<span class="courseNameView"><?php echo htmlspecialchars($courseV['courseName']); ?></span>"
                 </h1>
                 <p class="courseDalyDetalies">
-                    from<span class="startDateView"> 25/11/2019</span> to <span class="endDateView"> 2/1/2020</span>,
-                    totally <span class="totalHoursView">50</span> training hours
+                    from<span class="startDateView">
+                        <?php echo htmlspecialchars($courseV['startDate']); ?></span>
+                    to <span class="endDateView"> <?php echo htmlspecialchars($courseV['endDate']); ?></span>,
+                    totally <span
+                        class="totalHoursView"><?php echo htmlspecialchars($courseV['numberOfHours']); ?></span>
+                    training hours
                 </p>
                 <p class="institutionInformation">
-                    Institution was "<span class="institutionNameView">Top Tech</span>"
+                    Institution was "<span
+                        class="institutionNameView"><?php echo htmlspecialchars($courseV['institution']); ?></span>"
                 </p>
                 <figure>
                     <img src="../Images/certification.png" alt="Certification image" class="certificationImg" />
                     <figcaption class="figureCaption">Certification File</figcaption>
                 </figure>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- end header section -->
