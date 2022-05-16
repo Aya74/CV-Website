@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
         <div class="header-content">
             <div class="header-content-item">
                 <div class="row">
-                    <form action="AddCourse.php" method="post" id="addCourseForm" class="form">
+                    <form action="AddCourse.php" method="post" id="addCourseForm" class="form" enctype="multipart/form-data">
                         <table id="addCourseTable">
                             <tr class="addCourseTableRow">
                                 <td><label for="courseName">Course Name:</label></td>
