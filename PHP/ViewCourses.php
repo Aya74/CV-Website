@@ -78,7 +78,7 @@ mysqli_close($connC);
                             <td class="startdateTD"><?php echo htmlspecialchars($course['startDate']); ?></td>
                             <td class="enddateTD"><?php echo htmlspecialchars($course['endDate']); ?></td>
                             <td class="institutionTD"><?php echo htmlspecialchars($course['institution']); ?></td>
-                            <td class="attachmentTD"><a href="Course_View.php">View</a></td>
+                            <td class="attachmentTD"><a href="Course_View.php?id=<?php echo htmlspecialchars($course['id']); ?>">View</a></td>
                             <td class="noteTD"><?php echo htmlspecialchars($course['notes']); ?></td>
                         </tr>
                     <?php endforeach; ?>
