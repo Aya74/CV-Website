@@ -1,6 +1,6 @@
 # ✧ CV-Website
 
-Simple website that helps a user to write and order his/her CV, by adding hislher course information and experience information.
+Simple website that helps a user to write and order his/her CV, by adding his/her course information and experience information.
 
 # ✧ Description about pages in the website 📃
 
@@ -36,7 +36,7 @@ This page to add experience to the database in the Experiences table.
 
 1- Press at the link: [Github CV website repository](https://github.com/Aya74/CV-Website).<br>
 2- Click at code button.<br>
-3- Clone the repository to your device.<br>
+3- Clone the repository to your device on htdoc (folder on xampp).<br>
 4- Open gitBash.<br>
 5- Move to path you want at your device ➡ cd (the name of your path - without the braces).<br>
 6- Write ➡ git clone (paste the link of the repository - without the braces).<br>
