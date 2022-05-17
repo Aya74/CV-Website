@@ -100,23 +100,23 @@ if(isset($_POST['submit']) && isset($_FILES['fileInput'])){
                         <table id="addCourseTable">
                             <tr class="addCourseTableRow">
                                 <td><label for="courseName">Course Name:</label></td>
-                                <td><input type="text" name="courseName" id="courseName"></td>
+                                <td><input type="text" name="courseName" id="courseName" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="hoursNum">Number of Hours:</label></td>
-                                <td> <input type="number" name="hoursNum" id="hoursNum"></td>
+                                <td> <input type="number" name="hoursNum" id="hoursNum" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="startDate">Start Date:</label></td>
-                                <td> <input type="date" name="startDate" id="startDate"></td>
+                                <td> <input type="date" name="startDate" id="startDate" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="endtDate">End Date:</label></td>
-                                <td> <input type="date" name="endtDate" id="endtDate"></td>
+                                <td> <input type="date" name="endtDate" id="endtDate" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="institution">Institution:</label></td>
-                                <td><input type="text" name="institution" id="institution"></td>
+                                <td><input type="text" name="institution" id="institution" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="attachment">Attachment:</label></td>
@@ -129,11 +129,11 @@ if(isset($_POST['submit']) && isset($_FILES['fileInput'])){
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="urlInput">URL:</label></td>
-                                <td><input type="url" name="urlInput" id="urlInput"></td>
+                                <td><input type="url" name="urlInput" id="urlInput" requierd></td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="fileInput">File:</label></td>
-                                <td><input type="file" name="fileInput" id="fileInput">
+                                <td><input type="file" name="fileInput" id="fileInput" requierd>
                                 <?php if(isset($_REQUEST['error'])):?>
                                 <p><?php echo $_REQUEST['error']?></p>
                                 <?php endif ?>
