@@ -16,15 +16,41 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $notes = $_POST['notes'];
     //we have to declare var for the image
 }
-if(isset($_POST['submit'])){
-    // convert var input to string
+if(isset($_POST['submit']) && isset($_FILES['fileInput'])){
+    // // convert var input to string
     $courseName = mysqli_real_escape_string($conn, $_POST['courseName']);
     $institution = mysqli_real_escape_string($conn, $_POST['institution']);
     $url = mysqli_real_escape_string($conn, $_POST['urlInput']);
     $notes = mysqli_real_escape_string($conn, $_POST['notes']);
-    //insert information in database columns (استعلام قاعدة البيانات)
-    $sqlC = "INSERT INTO courses(courseName,numberOfHours,startDate,endDate,institution,attachment,url,notes)
-    VALUES ('$courseName','$numberOfHours','$startDate','$endDate','$institution','$attachment','$url','$notes')";
+    //var for uplode img
+    $imgName = $_FILES['fileInput']['name'];
+    $imgSize = $_FILES['fileInput']['size'];
+    $tmpNum = $_FILES['fileInput']['tmp_name'];
+    $error = $_FILES['fileInput']['error'];
+    if($error === 0){
+        if($imgSize>1500000){
+            $em = "Sorry, your file is too large!";
+            header("Location: AddCourse.php?error=$em");
+        }else{
+            $imgEx = pathinfo($imgName, PATHINFO_EXTENSION);
+            $imgExLw = strtolower($imgEx);
+            $allowedEx = array("jpg","jpeg","png");
+            if(in_array($imgExLw,$allowedEx)){
+                $newImgName = uniqid("IMG-",true).'.'.$imgExLw;
+                $imgUplodePth = '../Images/'.$newImgName;
+                move_uploaded_file($tmpNum,$imgUplodePth);
+                //insert into database
+                $sqlC = "INSERT INTO courses(courseName,numberOfHours,startDate,endDate,institution,attachment,url,imgUrl,notes)
+                VALUES ('$courseName','$numberOfHours','$startDate','$endDate','$institution','$attachment','$url','$newImgName','$notes')";
+            }else{
+                $em = "You can't upload this types of file";
+                header("Location: AddCourse.php?error=$em");
+            }
+        }
+    }else{
+        $em = "unknown error occured!";
+        header("Location: AddCourse.php?error=$em");
+    }
     //refresh the page when submit
     if(mysqli_query($conn, $sqlC))
     header("location:../PHP/AddCourse.php");
@@ -107,7 +133,11 @@ if(isset($_POST['submit'])){
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td><label for="fileInput">File:</label></td>
-                                <td><input type="file" name="fileInput" id="fileInput"></td>
+                                <td><input type="file" name="fileInput" id="fileInput">
+                                <?php if(isset($_REQUEST['error'])):?>
+                                <p><?php echo $_REQUEST['error']?></p>
+                                <?php endif ?>
+                            </td>
                             </tr>
                             <tr class="addCourseTableRow">
                                 <td class="textAreaLabel"><label for="notes">Notes:</label></td>
