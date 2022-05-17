@@ -13,7 +13,6 @@ $resultCV = mysqli_query($connCV,$sqlSelectCV);
 //get data from result and save it in an associative array
 $coursesV = mysqli_fetch_all($resultCV,MYSQLI_ASSOC);
 }
-mysqli_free_result($resultCV);
 mysqli_close($connCV);
 ?>
 <!DOCTYPE html>
@@ -68,7 +67,9 @@ mysqli_close($connCV);
                         class="institutionNameView"><?php echo htmlspecialchars($courseV['institution']); ?></span>"
                 </p>
                 <figure>
-                    <img src="../Images/certification.png" alt="Certification image" class="certificationImg" />
+                    <?php if(mysqli_num_rows($resultCV)>0) :?>
+                    <img src="../Images/<?=$courseV['imgUrl']?>" alt="Certification image" class="certificationImg" />
+                    <?php  endif;?>
                     <figcaption class="figureCaption">Certification File</figcaption>
                 </figure>
             </div>
