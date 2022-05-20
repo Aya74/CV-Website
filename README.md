@@ -44,7 +44,7 @@ This page to add experience to the database in the Experiences table.
 8- Write ➡ code.<br>
 9- open phpmyadmin from xampp apache.<br>
 10- create database named cvwebsite and change passwored localhost to root.<br>
-11- Import sql files from sql folder to the datapase.<br>
+11- Import sql files from sql folder to the database.<br>
 12- Open the pages intering localhost/CV-Website/Home.php.<br>
 
 # ✧ Tech stack and the purpose of it:
