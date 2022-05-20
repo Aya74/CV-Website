@@ -38,13 +38,14 @@ This page to add experience to the database in the Experiences table.
 2- Click at code button.<br>
 3- Clone the repository to your device on htdoc (folder on xampp).<br>
 4- Open gitBash.<br>
-5- Move to path you want at your device ➡ cd (the name of your path - without the braces).<br>
+5- Move to htdoc path at your device ➡ cd (the name of your path - without the braces).<br>
 6- Write ➡ git clone (paste the link of the repository - without the braces).<br>
 7- Press Enter to clone it.<br>
 8- Write ➡ code.<br>
-9- Open index.html file.<br>
-10- Right-click with the mouse.<br>
-11- Select open with live server.<br>
+9- open phpmyadmin from xampp apache.<br>
+10- create database named cvwebsite and change passwored localhost to root.<br>
+11- Import sql files from sql folder to the datapase.<br>
+12- Open the pages intering localhost/CV-Website/Home.php.<br>
 
 # ✧ Tech stack and the purpose of it:
 
